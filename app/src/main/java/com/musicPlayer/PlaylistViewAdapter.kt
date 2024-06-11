@@ -34,13 +34,13 @@ class PlaylistViewAdapter(private val context: Context, private var playlistList
         holder.delete.setOnClickListener {
             val builder = MaterialAlertDialogBuilder(context)
             builder.setTitle(playlistList[position].name)
-                .setMessage("Do you want to delete playlist?")
-                .setPositiveButton("Yes"){ dialog, _ ->
+                .setMessage("Удалить плейлист?")
+                .setPositiveButton("Да"){ dialog, _ ->
                     PlaylistActivity.musicPlaylist.ref.removeAt(position)
                     refreshPlaylist()
                     dialog.dismiss()
                 }
-                .setNegativeButton("No"){dialog, _ ->
+                .setNegativeButton("Нет"){dialog, _ ->
                     dialog.dismiss()
                 }
             val customDialog = builder.create()

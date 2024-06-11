@@ -48,14 +48,14 @@ class PlaylistDetails : AppCompatActivity() {
         }
         binding.removeAllPD.setOnClickListener {
             val builder = MaterialAlertDialogBuilder(this)
-            builder.setTitle("Remove")
-                .setMessage("Do you want to remove all songs from playlist?")
-                .setPositiveButton("Yes"){ dialog, _ ->
+            builder.setTitle("Удаление")
+                .setMessage("Удалить все аудио из плейлиста?")
+                .setPositiveButton("Да"){ dialog, _ ->
                     PlaylistActivity.musicPlaylist.ref[currentPlaylistPos].playlist.clear()
                     adapter.refreshPlaylist()
                     dialog.dismiss()
                 }
-                .setNegativeButton("No"){dialog, _ ->
+                .setNegativeButton("Нет"){dialog, _ ->
                     dialog.dismiss()
                 }
             val customDialog = builder.create()
@@ -69,8 +69,8 @@ class PlaylistDetails : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         binding.playlistNamePD.text = PlaylistActivity.musicPlaylist.ref[currentPlaylistPos].name
-        binding.moreInfoPD.text = "Total ${adapter.itemCount} Songs.\n\n" +
-                "Created On:\n${PlaylistActivity.musicPlaylist.ref[currentPlaylistPos].createdOn}\n\n" +
+        binding.moreInfoPD.text = "Всего ${adapter.itemCount} аудио.\n\n" +
+                "Создан:\n${PlaylistActivity.musicPlaylist.ref[currentPlaylistPos].createdOn}\n\n" +
                 "  -- ${PlaylistActivity.musicPlaylist.ref[currentPlaylistPos].createdBy}"
         if(adapter.itemCount > 0)
         {

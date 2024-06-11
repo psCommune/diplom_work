@@ -102,12 +102,12 @@ class MainActivity : AppCompatActivity() {
                 R.id.navAbout -> startActivity(Intent(this@MainActivity, AboutActivity::class.java))
                 R.id.navExit -> {
                     val builder = MaterialAlertDialogBuilder(this)
-                    builder.setTitle("Exit")
-                        .setMessage("Do you want to close app?")
-                        .setPositiveButton("Yes"){ _, _ ->
+                    builder.setTitle("Выход")
+                        .setMessage("Закрыть приложение?")
+                        .setPositiveButton("Да"){ _, _ ->
                             exitApplication()
                         }
-                        .setNegativeButton("No"){dialog, _ ->
+                        .setNegativeButton("Нет"){dialog, _ ->
                             dialog.dismiss()
                         }
                     val customDialog = builder.create()
@@ -160,7 +160,7 @@ class MainActivity : AppCompatActivity() {
         binding.musicRV.layoutManager = LinearLayoutManager(this@MainActivity)
         musicAdapter = MusicAdapter(this@MainActivity, MusicListMA)
         binding.musicRV.adapter = musicAdapter
-        binding.totalSongs.text  = "Total Songs : "+musicAdapter.itemCount
+        binding.totalSongs.text  = "Всего аудио : "+musicAdapter.itemCount
 
         //for refreshing layout on swipe from top
         binding.refreshLayout.setOnRefreshListener {

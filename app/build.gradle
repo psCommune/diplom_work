@@ -12,7 +12,7 @@ android {
         minSdkVersion 24
         targetSdkVersion 33
         versionCode 8
-        versionName "beta 0.2"
+        versionName "beta 0.3"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -53,4 +53,9 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.10'
     //for circular seekbar --> volume controls
     implementation 'com.github.lukelorusso:VerticalSeekBar:1.2.7'
+    // Import the Firebase BoM
+    implementation platform('com.google.firebase:firebase-bom:33.0.0')
+    // When using the BoM, don't specify versions in Firebase dependencies
+    implementation 'com.google.firebase:firebase-analytics'
+
 }

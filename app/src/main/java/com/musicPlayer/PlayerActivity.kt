@@ -139,14 +139,14 @@ class PlayerActivity : AppCompatActivity(), ServiceConnection, MediaPlayer.OnCom
             else {
                 val builder = MaterialAlertDialogBuilder(this)
                 builder.setTitle("Stop Timer")
-                    .setMessage("Do you want to stop timer?")
-                    .setPositiveButton("Yes"){ _, _ ->
+                    .setMessage("Остановить таймер?")
+                    .setPositiveButton("Да"){ _, _ ->
                         min15 = false
                         min30 = false
                         min60 = false
                         binding.timerBtnPA.setColorFilter(ContextCompat.getColor(this, R.color.cool_pink))
                     }
-                    .setNegativeButton("No"){dialog, _ ->
+                    .setNegativeButton("Нет"){dialog, _ ->
                         dialog.dismiss()
                     }
                     val customDialog = builder.create()

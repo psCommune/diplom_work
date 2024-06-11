@@ -43,8 +43,8 @@ class PlaylistActivity : AppCompatActivity() {
         val binder = AddPlaylistDialogBinding.bind(customDialog)
         val builder = MaterialAlertDialogBuilder(this)
         val dialog = builder.setView(customDialog)
-            .setTitle("Playlist Details")
-            .setPositiveButton("ADD"){ dialog, _ ->
+            .setTitle("Создание плейлиста")
+            .setPositiveButton("Создать"){ dialog, _ ->
                 val playlistName = binder.playlistName.text
                 val createdBy = binder.yourName.text
                 if(playlistName != null && createdBy != null)
@@ -66,7 +66,7 @@ class PlaylistActivity : AppCompatActivity() {
                 break
             }
         }
-        if(playlistExists) Toast.makeText(this, "Playlist Exist!!", Toast.LENGTH_SHORT).show()
+        if(playlistExists) Toast.makeText(this, "Плейлист с таким названием уже есть!", Toast.LENGTH_SHORT).show()
         else {
             val tempPlaylist = Playlist()
             tempPlaylist.name = name

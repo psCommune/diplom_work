@@ -56,12 +56,12 @@ class SettingsActivity : AppCompatActivity() {
             editor.putInt("themeIndex", index)
             editor.apply()
             val builder = MaterialAlertDialogBuilder(this)
-            builder.setTitle("Apply Theme")
-                .setMessage("Do you want to apply theme?")
-                .setPositiveButton("Yes"){ _, _ ->
+            builder.setTitle("Изменение темы")
+                .setMessage("Изменить тему?")
+                .setPositiveButton("Да"){ _, _ ->
                     exitApplication()
                 }
-                .setNegativeButton("No"){dialog, _ ->
+                .setNegativeButton("Нет"){dialog, _ ->
                     dialog.dismiss()
                 }
             val customDialog = builder.create()
