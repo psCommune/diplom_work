@@ -45,4 +45,10 @@
     <string name="big_player_nextsong_button">следующее аудио</string>
     <string name="big_player_backsong_button">back song</string>
     <string name="big_player_playsong_button">play song</string>
+    <string name="email_label">Электронная почта</string>
+    <string name="email_hint">Введите электронную почту</string>
+    <string name="password_label">Пароль</string>
+    <string name="password_hint">Введите пароль</string>
+    <string name="login_button">Войти</string>
+    <string name="login">Вход в аккаунт</string>
 </resources>

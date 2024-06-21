@@ -35,8 +35,6 @@ import com.musicPlayer.MusicService
 import com.musicPlayer.NowPlaying
 
 class PlayerActivity : AppCompatActivity(), ServiceConnection, MediaPlayer.OnCompletionListener {
-
-
     companion object {
         lateinit var musicListPA : ArrayList<Music>
         var songPosition: Int = 0
@@ -53,9 +51,6 @@ class PlayerActivity : AppCompatActivity(), ServiceConnection, MediaPlayer.OnCom
         var fIndex: Int = -1
         lateinit var loudnessEnhancer: LoudnessEnhancer
     }
-
-
-
     @SuppressLint("SetTextI18n")
     @RequiresApi(Build.VERSION_CODES.Q)
     override fun onCreate(savedInstanceState: Bundle?) {
